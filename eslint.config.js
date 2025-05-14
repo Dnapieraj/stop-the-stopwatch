@@ -31,7 +31,13 @@ export default defineConfig([
 			semi: ['off'],
 			quotes: ['off'],
 			'no-const-assign': ['error'],
-			'no-unused-vars': ['warn'],
+			'no-unused-vars': [
+				'warn',
+				{
+					ignoreRestSiblings: true,
+					argsIgnorePattern: '^_',
+				},
+			],
 			camelcase: ['error', { properties: 'never' }],
 			'no-console': ['warn'],
 			'react/prop-types': ['off'],
